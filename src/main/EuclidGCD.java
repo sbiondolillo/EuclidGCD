@@ -55,11 +55,15 @@ public class EuclidGCD {
 	 * @param B - the smaller of the two input integers
 	 */
 	private static int findRemainder(int A, int B) {
-		// find the larger of the two integers
 		// subtract the smaller from the larger until the next subtraction
-		//     would go below zero
+		// would go below zero
+		int remainder = A;
+		while (remainder - B >= 0) {
+			remainder -= B;
+		}
+		
 		// return the remaining balance
-		return 0;
+		return remainder;
 	}
 	/*
 	 * Main
