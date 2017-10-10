@@ -88,6 +88,7 @@ public class EuclidGCD {
 			}
 			catch (InputMismatchException e) {
 				System.out.println("That is not a valid integer.");
+				input.nextLine();
 			}
 		}
 		// do some basic input validation on the second input
@@ -99,6 +100,7 @@ public class EuclidGCD {
 			}
 			catch (InputMismatchException e) {
 				System.out.println("That is not a valid integer.");
+				input.nextLine();
 			}
 		}
 		System.out.println("Processing...");
