@@ -20,12 +20,29 @@ public class EuclidGCD {
 	 * @param B - any positive integer
 	 */
 	private static int GCD(int A, int B) {
+		// find the min and max input values
+		int min, max;
+		if (A > B) {
+			min = B;
+			max = A;
+		}
+		else {
+			min = A;
+			max = B;
+		}
 		// if A == 0, return B
+		if (A == 0)
+			return B;
 		// if B == 0, return A
+		else if (B == 0)
+			return A;
 		// if A != 0 & B != 0
+		else {
 		//     find the remainder of division
-		//     call GCD with the smaller number and the remainder
-		return 0;
+			int remainder = findRemainder(max,min);
+		//     call GCD with the smaller input value and the remainder
+			return GCD(min,remainder);
+		}
 	}
 	
 	/*
@@ -50,9 +67,9 @@ public class EuclidGCD {
 		
 		// Get input from user
 		System.out.println("This program will find the Greatest Common Denominator of two integers.");
-		System.out.print("Please enter the first integer: ");
+		System.out.print("Please enter the larger integer: ");
 		int firstInt = input.nextInt();
-		System.out.print("Please enter the second integer: ");
+		System.out.print("Please enter the smaller integer: ");
 		int secondInt = input.nextInt();
 		System.out.println("Processing...");
 		
