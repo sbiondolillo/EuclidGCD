@@ -24,7 +24,7 @@ public class EuclidGCD {
 		// return zero for invalid input
 		if (A < 0 || B < 0) {
 			System.out.println("This program does not compute GCD for negative inputs.");
-			return 0;
+			return 1;
 		}
 		// if A == 0, return B
 		if (A == 0)
