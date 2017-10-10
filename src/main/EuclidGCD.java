@@ -18,7 +18,11 @@ public class EuclidGCD {
 	 * @param B - any positive integer
 	 */
 	private int GCD(int A, int B) {
-		// TODO - implement this
+		// if A == 0, return B
+		// if B == 0, return A
+		// if A != 0 & B != 0
+		//     find the remainder of division
+		//     call GCD with the smaller number and the remainder
 		return 0;
 	}
 	
@@ -28,7 +32,10 @@ public class EuclidGCD {
 	 * @param B - any positive integer
 	 */
 	private int findRemainder(int A, int B) {
-		// TODO - implement this
+		// find the larger of the two integers
+		// subtract the smaller from the larger until the next subtraction
+		//     would go below zero
+		// return the remaining balance
 		return 0;
 	}
 	/*
