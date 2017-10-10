@@ -9,6 +9,7 @@
 
 package main;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class EuclidGCD {
@@ -22,6 +23,7 @@ public class EuclidGCD {
 	private static int GCD(int A, int B) {
 		// return zero for invalid input
 		if (A < 0 || B < 0) {
+			System.out.println("GCD is not valid for negative inputs.");
 			return 0;
 		}
 		// if A == 0, return B
@@ -33,6 +35,7 @@ public class EuclidGCD {
 		// if A != 0 & B != 0
 		else {
 			// find the min and max input values
+			// need this so we can do the proper "division" in findRemainder()
 			int min, max;
 			if (A > B) {
 				min = B;
@@ -42,7 +45,7 @@ public class EuclidGCD {
 				min = A;
 				max = B;
 			}
-			// find the remainder of division
+			// find the remainder of "division"
 			int remainder = findRemainder(max,min);
 			// call GCD with the smaller input value and the remainder
 			return GCD(min,remainder);
@@ -50,7 +53,7 @@ public class EuclidGCD {
 	}
 	
 	/*
-	 * Finds the remainder of division by successive subtraction
+	 * Finds the remainder of "division" by successive subtraction
 	 * @param A - the larger of the two input integers
 	 * @param B - the smaller of the two input integers
 	 */
@@ -72,13 +75,32 @@ public class EuclidGCD {
 	public static void main(String[] args) {
 		// Set up input stream
 		Scanner input = new Scanner(System.in);
+		int firstInt, secondInt;
 		
 		// Get input from user
 		System.out.println("This program will find the Greatest Common Denominator of two integers.");
-		System.out.print("Please enter the first integer: ");
-		int firstInt = input.nextInt();
-		System.out.print("Please enter the second integer: ");
-		int secondInt = input.nextInt();
+		// do some basic input validation on the first input
+		while (true) {
+			System.out.print("Please enter the first integer from 0 to 2,147,483,647: ");
+			try {
+				firstInt = input.nextInt();
+				break;
+			}
+			catch (InputMismatchException e) {
+				System.out.println("That is not a valid integer.");
+			}
+		}
+		// do some basic input validation on the second input
+		while (true) {
+			System.out.print("Please enter the second integer from 0 to 2,147,483,647: ");
+			try {
+				secondInt = input.nextInt();
+				break;
+			}
+			catch (InputMismatchException e) {
+				System.out.println("That is not a valid integer.");
+			}
+		}
 		System.out.println("Processing...");
 		
 		// Call GCD method
