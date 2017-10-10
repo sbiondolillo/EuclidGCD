@@ -2,17 +2,44 @@
  * EuclidGCD Class
  * Samuel Biondolillo
  * CIS210M:ZZ Data Structures and Elementary Algorithms
- * Goal: To implement Euclid's Algorithm for finding the Greatest Common Denominator
+ * Goal: To implement Euclid's Algorithm for finding the Greatest Common Denominator 
+ *       using only addition and subtraction - no modulo, no multiplication, no division
  * Version  0.0.1   10/10/17
  */
 
 package main;
 
 public class EuclidGCD {
-
+	
+	/*
+	 * Find the Greatest Common Denominator for two integers
+	 * Using Euclid's Algorithm (recursive)
+	 * @param A - any positive integer
+	 * @param B - any positive integer
+	 */
+	private int GCD(int A, int B) {
+		// TODO - implement this
+		return 0;
+	}
+	
+	/*
+	 * Finds the remainder of division by successive subtraction
+	 * @param A - any positive integer
+	 * @param B - any positive integer
+	 */
+	private int findRemainder(int A, int B) {
+		// TODO - implement this
+		return 0;
+	}
+	/*
+	 * Main
+	 * Get user input, process input, display results
+	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		// Set up input stream
+		// Get input from user
+		// Call GCD method
+		// Print results
 	}
 
 }
