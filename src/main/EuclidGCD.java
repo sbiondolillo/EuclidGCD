@@ -23,7 +23,7 @@ public class EuclidGCD {
 	private static int GCD(int A, int B) {
 		// return zero for invalid input
 		if (A < 0 || B < 0) {
-			System.out.println("GCD is not valid for negative inputs.");
+			System.out.println("This program does not compute GCD for negative inputs.");
 			return 0;
 		}
 		// if A == 0, return B
@@ -78,7 +78,7 @@ public class EuclidGCD {
 		int firstInt, secondInt;
 		
 		// Get input from user
-		System.out.println("This program will find the Greatest Common Denominator of two integers.");
+		System.out.println("This program will find the Greatest Common Denominator of two positive integers.");
 		// do some basic input validation on the first input
 		while (true) {
 			System.out.print("Please enter the first integer from 0 to 2,147,483,647: ");
