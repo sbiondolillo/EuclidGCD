@@ -9,6 +9,8 @@
 
 package main;
 
+import java.util.Scanner;
+
 public class EuclidGCD {
 	
 	/*
@@ -17,7 +19,7 @@ public class EuclidGCD {
 	 * @param A - any positive integer
 	 * @param B - any positive integer
 	 */
-	private int GCD(int A, int B) {
+	private static int GCD(int A, int B) {
 		// if A == 0, return B
 		// if B == 0, return A
 		// if A != 0 & B != 0
@@ -31,7 +33,7 @@ public class EuclidGCD {
 	 * @param A - any positive integer
 	 * @param B - any positive integer
 	 */
-	private int findRemainder(int A, int B) {
+	private static int findRemainder(int A, int B) {
 		// find the larger of the two integers
 		// subtract the smaller from the larger until the next subtraction
 		//     would go below zero
@@ -44,9 +46,24 @@ public class EuclidGCD {
 	 */
 	public static void main(String[] args) {
 		// Set up input stream
+		Scanner input = new Scanner(System.in);
+		
 		// Get input from user
+		System.out.println("This program will find the Greatest Common Denominator of two integers.");
+		System.out.print("Please enter the first integer: ");
+		int firstInt = input.nextInt();
+		System.out.print("Please enter the second integer: ");
+		int secondInt = input.nextInt();
+		System.out.println("Processing...");
+		
 		// Call GCD method
+		int gcdOut = GCD(firstInt,secondInt);
+		
 		// Print results
+		System.out.println("The Greatest Common Denominator of " + firstInt + " and " + secondInt + " is: " + gcdOut);
+		
+		// Close input stream
+		input.close();
 	}
 
 }
