@@ -20,15 +20,9 @@ public class EuclidGCD {
 	 * @param B - any positive integer
 	 */
 	private static int GCD(int A, int B) {
-		// find the min and max input values
-		int min, max;
-		if (A > B) {
-			min = B;
-			max = A;
-		}
-		else {
-			min = A;
-			max = B;
+		// return zero for invalid input
+		if (A < 0 || B < 0) {
+			return 0;
 		}
 		// if A == 0, return B
 		if (A == 0)
@@ -38,17 +32,27 @@ public class EuclidGCD {
 			return A;
 		// if A != 0 & B != 0
 		else {
-		//     find the remainder of division
+			// find the min and max input values
+			int min, max;
+			if (A > B) {
+				min = B;
+				max = A;
+			}
+			else {
+				min = A;
+				max = B;
+			}
+			// find the remainder of division
 			int remainder = findRemainder(max,min);
-		//     call GCD with the smaller input value and the remainder
+			// call GCD with the smaller input value and the remainder
 			return GCD(min,remainder);
 		}
 	}
 	
 	/*
 	 * Finds the remainder of division by successive subtraction
-	 * @param A - any positive integer
-	 * @param B - any positive integer
+	 * @param A - the larger of the two input integers
+	 * @param B - the smaller of the two input integers
 	 */
 	private static int findRemainder(int A, int B) {
 		// find the larger of the two integers
