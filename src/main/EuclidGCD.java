@@ -2,7 +2,7 @@
  * EuclidGCD Class
  * Samuel Biondolillo
  * CIS210M:ZZ Data Structures and Elementary Algorithms
- * Goal: To implement Euclid's Algorithm for finding the Greatest Common Denominator 
+ * Goal: To implement Euclid's Algorithm for finding the Greatest Common Divisor 
  *       using only addition and subtraction - no modulo, no multiplication, no division
  * Version  0.0.1   10/10/17
  */
@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class EuclidGCD {
 	
 	/*
-	 * Find the Greatest Common Denominator for two integers
+	 * Find the Greatest Common Divisor for two integers
 	 * Using Euclid's Algorithm (recursive)
 	 * @param A - any positive integer
 	 * @param B - any positive integer
@@ -78,7 +78,7 @@ public class EuclidGCD {
 		int firstInt, secondInt;
 		
 		// Get input from user
-		System.out.println("This program will find the Greatest Common Denominator of two positive integers.");
+		System.out.println("This program will find the Greatest Common Divisor of two positive integers.");
 		// do some basic input validation on the first input
 		while (true) {
 			System.out.print("Please enter the first integer from 0 to 2,147,483,647: ");
@@ -109,7 +109,7 @@ public class EuclidGCD {
 		int gcdOut = GCD(firstInt,secondInt);
 		
 		// Print results
-		System.out.println("The Greatest Common Denominator of " + firstInt + " and " + secondInt + " is: " + gcdOut);
+		System.out.println("The Greatest Common Divisor of " + firstInt + " and " + secondInt + " is: " + gcdOut);
 		
 		// Close input stream
 		input.close();
