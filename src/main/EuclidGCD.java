@@ -75,9 +75,9 @@ public class EuclidGCD {
 		
 		// Get input from user
 		System.out.println("This program will find the Greatest Common Denominator of two integers.");
-		System.out.print("Please enter the larger integer: ");
+		System.out.print("Please enter the first integer: ");
 		int firstInt = input.nextInt();
-		System.out.print("Please enter the smaller integer: ");
+		System.out.print("Please enter the second integer: ");
 		int secondInt = input.nextInt();
 		System.out.println("Processing...");
 		
