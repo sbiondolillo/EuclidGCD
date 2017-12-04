@@ -111,8 +111,7 @@ public class EuclidGCD {
 		// Print results
 		System.out.println("The Greatest Common Divisor of " + firstInt + " and " + secondInt + " is: " + gcdOut);
 		
-		// Close input stream
-		input.close();
+		// input.close(); // uncomment this line if running this program stand-alone
 	}
 
 }
